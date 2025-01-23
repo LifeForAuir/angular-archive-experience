@@ -1,1 +1,6 @@
-<router-outlet></router-outlet>
+<div class="main-container">
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+    <app-sidebar-menu [menuItems]="menuItems" [activeItem]="activeItem" (activeItemChange)="setActiveItem($event)"></app-sidebar-menu>
+</div>

@@ -1,4 +1,5 @@
 import { Type } from "@angular/core";
+import {MenuItem} from "./menu.interface";
 
 export interface Tab {
     label: string;
@@ -6,4 +7,8 @@ export interface Tab {
     content?: string;
     active?: boolean;
     children?: Tab[];
+}
+
+export interface SidBarMenuItem extends MenuItem{
+    open?: boolean;
 }

@@ -1,0 +1,15 @@
+<li [class.active]="activeItem === item.label">
+    <a *ngIf="item.link" [routerLink]="item.link" (click)="setActive(item.label)">
+        {{ item.label }}
+    </a>
+    <span *ngIf="!item.link" (click)="toggleSubmenu(item)">
+        {{ item.label }}
+        <span *ngIf="item.children" class="arrow">&#9660;</span>
+    </span>
+    <ul *ngIf="item.children && item.open" class="submenu">
+        <ng-container *ngFor="let subitem of item.children">
+            <app-sidebar-menu-item [item]="subitem" [activeItem]="activeItem" (activeItemChange)="setActive($event)"></app-sidebar-menu-item>
+        </ng-container>
+    </ul>
+</li>
+
