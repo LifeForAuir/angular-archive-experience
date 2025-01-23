@@ -1,0 +1,47 @@
+.tabbed-menu {
+    border: 1px solid #ccc;
+    margin: 20px;
+    padding: 10px;
+
+    .tab-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        margin-bottom: 10px;
+
+        .tab-item {
+            padding: 10px 20px;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+
+            &.active {
+                border-bottom: 2px solid #007bff;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .sub-tab-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        margin-left: 20px;
+
+        .sub-tab-item {
+            padding: 10px 20px;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+
+            &.active {
+                border-bottom: 2px solid #007bff;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .tab-content {
+        padding: 20px;
+    }
+}
