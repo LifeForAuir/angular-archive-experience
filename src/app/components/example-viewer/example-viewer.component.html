@@ -1,0 +1,8 @@
+<h2>{{ title }}</h2>
+<p>{{ description }}</p>
+
+<pre><code class="language-typescript">{{ code }}</code></pre>
+
+<div *ngIf="sourceUrl">
+  <a [href]="sourceUrl" target="_blank" rel="noopener noreferrer">Источник</a>
+</div>

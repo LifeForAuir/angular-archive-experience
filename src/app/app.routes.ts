@@ -1,27 +1,17 @@
-import {Routes} from '@angular/router';
-import {LayoutComponent} from "./components/layout/layout.component";
-import {MainMenuItems, MenuItem} from "./model/menu.interface";
+import { Routes } from '@angular/router';
+import { LayoutComponent } from './components/layout/layout.component';
+import { ExampleViewerSelectedComponent } from './components/example-viewer-selected/example-viewer-selected.component';
 
+export const routes: Routes = [
+  { path: 'Typescript',
+    children: [
+        {
+            path:"Generic/:id", component: ExampleViewerSelectedComponent, title: 'Typescript Examples'
+        },
+    ],
+    },
+  { path: '', component: LayoutComponent },
+  { path: 'Angular', component: LayoutComponent },
+  { path: 'Other', component: LayoutComponent },
+];
 
-function generateRoutes(menuItems: MenuItem[], parentPath: string = ''): Routes {
-    let routes: Routes = [];
-
-    for (const item of menuItems) {
-        if (item.link) {
-            const path = item.link.startsWith('/') ? item.link.substring(1) : item.link;
-            const route = {
-                path: `${parentPath}${path}`,
-                component: LayoutComponent,
-            };
-            routes.push(route);
-        }
-
-        if (item.children) {
-            routes = routes.concat(generateRoutes(item.children, `${parentPath}${item.link ? item.link.substring(1) + '/' : ''}`));
-        }
-    }
-    return routes;
-}
-
-
-export const routes: Routes = generateRoutes(MainMenuItems);

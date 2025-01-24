@@ -1,0 +1,16 @@
+pre {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    overflow-x: auto;
+  }
+  
+  h2 {
+      margin-bottom: 10px;
+  }
+  
+  a {
+    margin-top: 10px;
+    display: inline-block;
+  }
+  

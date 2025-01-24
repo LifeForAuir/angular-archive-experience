@@ -27,7 +27,8 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/prismjs/themes/prism.css"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -97,5 +98,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "560b31b7-e799-4e1d-b2ee-f51ba3037680"
   }
 }

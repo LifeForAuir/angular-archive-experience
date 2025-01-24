@@ -1,0 +1,8 @@
+<div *ngIf="selectedExample">
+    <app-example-viewer
+      [title]="selectedExample.title"
+      [description]="selectedExample.description"
+      [code]="selectedExample.code"
+      [sourceUrl]="selectedExample.sourceUrl"
+    ></app-example-viewer>
+  </div>
