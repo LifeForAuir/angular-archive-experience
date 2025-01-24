@@ -13,4 +13,8 @@ pre {
     margin-top: 10px;
     display: inline-block;
   }
+
+  .description-container {
+    overflow-wrap: break-word; /* Или word-wrap: break-word; */
+  }
   
