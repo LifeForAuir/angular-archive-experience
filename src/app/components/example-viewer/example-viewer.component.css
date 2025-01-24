@@ -17,4 +17,23 @@ pre {
   .description-container {
     overflow-wrap: break-word; /* Или word-wrap: break-word; */
   }
+
+  .example-viewer {
+    display: flex;
+    flex-direction: column; /* Размещаем контент сверху вниз */
+    height: 100%; /* Занимаем всю доступную высоту контейнера */
+    overflow: hidden; /* Скрываем контент, выходящий за границы */
+  }
+  
+  .example-header {
+      padding: 10px;
+      background-color: #f0f0f0;
+      /* Добавьте другие нужные стили */
+  }
+  
+  .example-body {
+      flex: 1; /* Занимаем оставшееся пространство */
+      overflow-y: auto; /* Добавляем прокрутку, если контент не помещается */
+      padding: 10px;
+  }
   
